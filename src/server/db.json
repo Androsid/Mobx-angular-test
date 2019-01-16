@@ -1,0 +1,29 @@
+{
+    "todos": [
+        {
+            "title": "обувь, аксессуары",
+            "completed": false,
+            "id": 1
+        },
+        {
+            "title": "Одежда",
+            "completed": true,
+            "id": 2
+        },
+        {
+            "completed": false,
+            "title": "learn MobX",
+            "id": 5
+        },
+        {
+            "completed": false,
+            "title": "learn Angular",
+            "id": 6
+        },
+        {
+            "completed": false,
+            "title": "fds",
+            "id": 7
+        }
+    ]
+}

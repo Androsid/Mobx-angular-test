@@ -23,6 +23,8 @@ import { FooterComponent } from './thirdComponent/footer/footer.component';
 import { SectionComponent } from './thirdComponent/section/section.component';
 import { ThirdComponent } from './thirdComponent/thirdComponent.component';
 import { Todos } from './thirdComponent/stores/todos.store';
+import { HttpClientModule } from '@angular/common/http';
+import { DbService } from './service/db.service';
 
   const COMPONENTS = [TodosComponent,
     TodoComponent,ThirdComponent,
@@ -40,12 +42,13 @@ import { Todos } from './thirdComponent/stores/todos.store';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MobxAngularModule,
     ...MATERIAL_MODULES,
     FormsModule, ReactiveFormsModule
   ],
-  providers: [TodosStore, Store, Todos],
+  providers: [TodosStore, Store, Todos,DbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
