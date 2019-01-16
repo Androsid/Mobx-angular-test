@@ -7,6 +7,7 @@ import { fromMobx } from 'ngx-mobx';
   selector: 'app-todos-page',
   template: `
    <app-todos [todos]="todos | async" (complete)="complete($event)"></app-todos>
+
    <input #input>
     <button (click)="addTodo(input.value)">Add todo</button>
   `

@@ -7,7 +7,6 @@ import { TodosComponent } from './firstComponent/todos/todos.component';
 import { TodoComponent } from './firstComponent/todo/todo.component';
 import { TodosPageComponent } from './firstComponent/todos-page/todos-page.component';
 import { TodosStore } from './firstComponent/store/todos.store';
-import { TodosFilterStore } from './firstComponent/store/todos-filter.store';
 
 import { MobxAngularModule } from 'mobx-angular';
 
@@ -19,9 +18,14 @@ import { TotalComponent } from './secondComponent/total/total.component';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Store } from './secondComponent/store/app.store';
+import { CountComponent } from './thirdComponent/count/count.component';
+import { FooterComponent } from './thirdComponent/footer/footer.component';
+import { SectionComponent } from './thirdComponent/section/section.component';
+import { ThirdComponent } from './thirdComponent/thirdComponent.component';
+import { Todos } from './thirdComponent/stores/todos.store';
 
   const COMPONENTS = [TodosComponent,
-    TodoComponent,
+    TodoComponent,ThirdComponent,
     TodosPageComponent, InputComponent, SpendingsComponent, TotalComponent];
   const MATERIAL_MODULES = [MatButtonModule, MatTableModule, MatCardModule, MatSelectModule, MatFormFieldModule, MatInputModule,
     MatCheckboxModule, BrowserAnimationsModule];
@@ -29,7 +33,10 @@ import { Store } from './secondComponent/store/app.store';
 @NgModule({
   declarations: [
     AppComponent,
-    ...COMPONENTS
+    ...COMPONENTS,
+    CountComponent,
+    FooterComponent,
+    SectionComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,7 @@ import { Store } from './secondComponent/store/app.store';
     ...MATERIAL_MODULES,
     FormsModule, ReactiveFormsModule
   ],
-  providers: [TodosStore, TodosFilterStore, Store],
+  providers: [TodosStore, Store, Todos],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
