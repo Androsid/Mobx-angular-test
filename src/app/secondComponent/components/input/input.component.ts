@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
-import { Store } from '../store/app.store';
+import { Store } from '../../store/app.store';
 
 @Component({
   selector: 'app-input',

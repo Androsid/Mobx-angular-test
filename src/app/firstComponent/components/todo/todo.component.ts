@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
-import { Todo, TodosStore } from '../store/todos.store';
+import { Todo, TodosStore } from '../../store/todos.store';
 
 @Component({
   selector: 'app-todo',

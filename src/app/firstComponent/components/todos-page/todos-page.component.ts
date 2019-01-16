@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Todo, TodosStore } from '../store/todos.store';
+import { Todo, TodosStore } from '../../store/todos.store';
 import { fromMobx } from 'ngx-mobx';
 
 @Component({
